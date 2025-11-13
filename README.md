@@ -23,3 +23,15 @@
 
 - Payroll_log table
 <img src="./images/6_Payroll_Log.png" alt="Payroll_log table" />
+
+
+## 3) Exception Handling in PL/SQL – Library Book Issue System
+
+- Books Table before issuing the book
+<img src="./images/7_Books_Table.png" alt="Books_Table" />
+
+- Issuing the book and Divide by zero Exception
+<img src="./images/8_Issue_Book.png" alt="Issue_Book" />
+
+- Data not found Exception
+<img src="./images/9_NO_DATA_FOUND.png" alt="NO_DATA_FOUND"/>

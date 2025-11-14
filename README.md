@@ -35,3 +35,10 @@
 
 - Data not found Exception
 <img src="./images/9_NO_DATA_FOUND.png" alt="NO_DATA_FOUND"/>
+
+
+## 4) Working with PL/SQL Collections
+
+- Script Output for given subTasks
+<img src="./images/10_Collections1.png" alt="Collections1"/>
+<img src="./images/11_Collection2.png" alt="Collection2"/>

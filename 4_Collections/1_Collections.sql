@@ -21,9 +21,7 @@ INSERT INTO Products VALUES (10, 'Power Bank', 9, 1000);
 COMMIT;
  */
 
-
 DECLARE
-
     --  ASSOCIATIVE ARRAY 
    TYPE product_name_aat IS TABLE OF VARCHAR2(50)
         INDEX BY PLS_INTEGER;
@@ -55,8 +53,8 @@ BEGIN
 
 
 
-    -- Displaying the content of Associative Array
-    DBMS_OUTPUT.PUT_LINE('--- Associative Array Output ---');
+    -- 1 & 2) Displaying the content of Associative Array
+    DBMS_OUTPUT.PUT_LINE('--- 1 and 2) Associative Array Output ---');
 
     FOR i IN 1..l_product_names.COUNT
     LOOP
@@ -66,9 +64,10 @@ BEGIN
     END LOOP;
 
 
-    -- Counting the total Quantity
-    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- Nested Table Quantities ---');
+    -- 3) Counting the total Quantity
+    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- 3) Nested Table Quantities ---');
     FOR i IN 1..l_quantities.COUNT LOOP
+        -- DBMS_OUTPUT.PUT_LINE(i || ' : ' || l_quantities(i));
         v_total_quantity := v_total_quantity + l_quantities(i);
     END LOOP;
 
@@ -76,8 +75,8 @@ BEGIN
 
 
 
-    -- VARRAY
-    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- VARRAY Output ---');
+    -- 4) VARRAY
+    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- 4) VARRAY Output ---');
     l_varray := product_varray('Laptop','Mobile','Headphones','Keyboard','Mouse');
 
     FOR i IN 1..l_varray.COUNT 
@@ -86,9 +85,18 @@ BEGIN
     END LOOP;
 
 
+    -- 6) Combine collections to display products whose quantity is below 10.
+    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- 6) Low Stock Products ---');
+    FOR i IN 1..l_quantities.COUNT LOOP
+        if(l_quantities(i) < 10) THEN
+            DBMS_OUTPUT.PUT_LINE('Name: ' || l_product_names(i)  || ' | Qty: ' || l_quantities(i));
+        END IF;
+    END LOOP;
 
-    -- Collection Methods
-    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- Collection Methods Demo ---');
+
+
+    -- 5) Collection Methods
+    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- 5) Collection Methods Demo ---');
 
     -- 1) Deleting the Elem
     DBMS_OUTPUT.PUT_LINE('Before DELETE, quantities count: ' || l_quantities.COUNT);
@@ -103,6 +111,7 @@ BEGIN
     l_quantities(l_quantities.COUNT) := 99;
 
     DBMS_OUTPUT.PUT_LINE('After EXTEND, quantities count: ' || l_quantities.COUNT);
+   
 
 END;
 /

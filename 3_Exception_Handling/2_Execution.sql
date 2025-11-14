@@ -1,6 +1,6 @@
 DECLARE
    
-   p_book_id Books.BOOK_ID%TYPE := 104;
+   p_book_id Books.BOOK_ID%TYPE := 106;
 
    v_available_qty Books.AVAILABLE_QTY%TYPE;
 

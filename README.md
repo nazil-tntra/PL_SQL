@@ -42,3 +42,9 @@
 - Script Output for given subTasks
 <img src="./images/10_Collections1.png" alt="Collections1"/>
 <img src="./images/11_Collection2.png" alt="Collection2"/>
+
+
+## 5) Working with PL/SQL Records and %ROWTYPE
+
+- Script OUTPUT
+<img src="./images/12_Rec_RowType.png" alt="Rec_RowType"/>

@@ -48,3 +48,9 @@
 
 - Script OUTPUT
 <img src="./images/12_Rec_RowType.png" alt="Rec_RowType"/>
+
+
+## 6) Working with PL/SQL Cursors
+
+- Script O/P
+<img src="./images/13_Cursors.png" alt="Cursors" />

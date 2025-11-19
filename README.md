@@ -54,3 +54,26 @@
 
 - Script O/P
 <img src="./images/13_Cursors.png" alt="Cursors" />
+
+
+## 7) Implementing PL/SQL Triggers
+
+<img src="./images/14_Triggers_Compiled.png" alt="img"/>
+
+- ```check_product_quantity``` Trigger Execution O/P
+<img src="./images/15_Trigger1.png" alt="img"/>
+
+- ```validate_price_update``` Trigger Execution O/P
+<img src="./images/16_Trigger2.png" alt="img"/>
+
+- ```log_new_product``` Trigger Execution
+
+    - ```Products_log``` table before insertion 
+    <img src="./images/17_Product_log_Before.png" alt="img"/>
+
+    - ```Products_log``` table after insertion 
+    <img src="./images/18_Product_log_After.png" alt="img"/>
+
+- ```prevent_delete_low_stock``` Trigger Execution O/P
+<img src="./images/19_Trigger4.png" alt="img"/>
+

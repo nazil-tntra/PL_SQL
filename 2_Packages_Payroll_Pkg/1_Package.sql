@@ -41,7 +41,7 @@
  */
 
 
--- Package Specifications
+-- Package Specifications (Declaration)
 CREATE OR REPLACE PACKAGE payroll_pkg AS
 
     company_bonus CONSTANT NUMBER := 500;

@@ -18,10 +18,13 @@ DECLARE
 BEGIN
  
     -- 1) BULK COLLECT
+    DBMS_OUTPUT.PUT_LINE('Demonstrating BULK COLLECT');
     SELECT * 
     BULK COLLECT INTO product_list
     FROM PRODUCTS
     WHERE QUANTITY < 20;
+
+    DBMS_OUTPUT.PUT_LINE('--- Products with quantity < 20 ---');
 
     FOR i IN 1..product_list.COUNT
     LOOP
@@ -34,10 +37,12 @@ BEGIN
 
 
     -- 2) FOR ALL
+    DBMS_OUTPUT.PUT_LINE(CHR(10) || 'Demonstrating FOR ALL');
     OPEN product_ids;
         FETCH product_ids BULK COLLECT INTO product_id_list;
     CLOSE product_ids;
 
+    DBMS_OUTPUT.PUT_LINE(product_id_list.COUNT || ' products updated using FORALL.');
 
     FORALL i IN 1..product_id_list.COUNT
         UPDATE PRODUCTS

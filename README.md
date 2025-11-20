@@ -77,3 +77,18 @@
 - ```prevent_delete_low_stock``` Trigger Execution O/P
 <img src="./images/19_Trigger4.png" alt="img"/>
 
+
+
+## 8) Working with PL/SQL Bulk Operations & Dynamic SQL
+
+- BULK Collect O/P
+<img src="./images/20_BULK_Collect.png" alt="img" />
+
+- ```Products``` table before update
+<img src="./images/21_Products_table_before.png" alt="img" />
+
+- Dynamic SQL O/P
+<img src="./images/22_Dynamic_SQL.png" alt="img" />
+
+- ```Products``` table after update
+<img src="./images/23_Products_Table_After.png" alt="img" />
